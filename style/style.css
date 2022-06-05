@@ -5,23 +5,30 @@
 }
 
 .container {
-    width: 1365px;
+    width: auto;
     height: auto;
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
-    background-color: #fafafa
+    background-color: #fafafa;
 }
 
-.logo {
+.logo-fixed {
+    position: fixed;
+    z-index: 1;
     background-color: #FFFFFF;
-    width: auto;
+    width: 100vw;
+    height: 54px;
+    display: flex;
+    border-bottom: 1px solid #DBDBDB;
+}
+.logo{
+    width: 935px;
     height: 54px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #DBDBDB;
-    padding-left: 215px;
-    padding-right: 215px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -55,8 +62,8 @@
 
 .diviser {
     border: 0.1px solid rgb(199, 199, 199);
-    width: 0.1px;
-    height: 20px;
+    width: 1px;
+    height: 22px;
 }
 
 .search-box {
@@ -77,7 +84,6 @@
 }
 
 .main {
-    /* background-color: #979797; */
     display: flex;
     width: 935px;
     justify-content: space-between;
@@ -86,7 +92,6 @@
 }
 
 .content {
-    /* background-color: paleturquoise; */
     width: 614px;
     height: auto;
 }
@@ -95,7 +100,7 @@
     background-color: #FFFFFF;
     height: 118px;
     width: 614px;
-    margin-top: 35px;
+    margin-top: 85px;
     margin-bottom: 24px;
     border-radius: 3px;
     display: flex;
@@ -103,6 +108,7 @@
     overflow: hidden;
     position: relative;
     border: 1px solid #DBDBDB;
+    box-shadow: 0 0 2px #DBDBDB;
 }
 
 .story {
@@ -111,7 +117,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 9px;
+    margin-left: 15px;
+    cursor: pointer;
 }
 
 .border-stories {
@@ -132,7 +139,7 @@
     position: absolute;
 }
 
-.border-stories h3 {
+.story h3 {
     margin-top: 1px;
     font-size: 12px;
     font-weight: 400;
@@ -143,7 +150,8 @@
     width: 25px;
     height: 25px;
     position: absolute;
-    background-color: rgba(78, 74, 74, 0.1);
+    /* background-color: rgba(209, 3, 3, 0.1); */
+    box-shadow: 0 2px 2px #dbdbdbd5;
     border-radius: 50%;
     right: 10px;
     top: 40px;
@@ -153,7 +161,6 @@
 /* Cards do texto */
 
 .card {
-    /* background-color: thistle; */
     width: auto;
     height: auto;
     margin-bottom: 60px;
@@ -181,23 +188,25 @@
     margin-right: 15px;
     width: 32px;
     height: 32px;
+    cursor: pointer;
 }
 
 .card-title h3 {
     font-size: 14px;
     font-weight: 500;
     line-height: 16px;
+    cursor: pointer;
 }
 
-.card img {
+.card .main-picture{
     width: auto;
+    height: 612px;
 }
 
 .bottom-card {
     width: auto;
     height: 80px;
-    padding: 10px 15px;
-    /* background-color: yellow; */
+    padding: 10px 15px 10px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -238,14 +247,13 @@
 /* sidebar */
 
 .sidebar {
-    /* background-color: rgb(221, 218, 228); */
     width: 293px;
     height: 400px;
-    margin-top: 35px;
+    margin-top: 85px;
     padding-top: 20px;
     position: sticky;
-    top: 0%;
-    right: )%;
+    top: 10%;
+    right: 0;
 }
 
 .sidebar .perfil {
@@ -257,12 +265,14 @@
     width: 56px;
     height: 56px;
     margin-right: 15px;
+    cursor: pointer;
 }
 
 .sidebar .perfil h3 {
     line-height: 16.41px;
     font-size: 14px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .sidebar .perfil span {
@@ -274,7 +284,6 @@
     margin-top: 25px;
     width: auto;
     height: auto;
-    /* background-color: aliceblue; */
 }
 
 /* formatar os textos contidos no sidebar*/
@@ -283,6 +292,7 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 14px;
+    cursor: pointer;
 }
 
 .sugestions h3 {
@@ -321,6 +331,12 @@
 .perfil-sugestion img {
     margin-right: 11px;
 }
+.perfil-sugestion span{
+    color: #979797;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+}
 
 .infos {
     margin-top: 33px;
@@ -336,10 +352,9 @@
 }
 
 /* responsividade para tablet */
-@media(max-width:914px) and (min-width:614px) {
+@media(min-width:614px) and (max-width:935px)  {
     .container {
         width: 100%;
-        /* background-color: #139EF2; */
         margin-left: auto;
         margin-right: auto;
     }
@@ -348,11 +363,15 @@
         display: none;
     }
 
-    .logo {
-        width: auto;
+    /* .logo-fixed{
+        position: fixed;
+        width: 100%;
         height: 54px;
-        padding-left: 20px;
-        padding-right: 20px;
+        background-color: #139EF2;
+    } */
+    .logo{
+        width: 100%;
+        padding: 0 20px;
     }
 
     .main {
@@ -434,5 +453,6 @@
     #bottom-inferior{
         width: 20px;
         height: 20px;
+        cursor: pointer;
     }
 }
