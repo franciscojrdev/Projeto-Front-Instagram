@@ -425,6 +425,9 @@
     height: auto;
     overflow: hidden;
   }
+  .card .main-picture{
+    width: 100%;
+  }
   .barra-inferior {
     display: flex;
     justify-content: space-between;
