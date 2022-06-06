@@ -100,7 +100,7 @@
   background-color: #ffffff;
   height: 118px;
   width: 614px;
-  margin-top: 85px;
+  margin-top: 88px;
   margin-bottom: 24px;
   border-radius: 3px;
   display: flex;
@@ -194,7 +194,7 @@
   cursor: pointer;
 }
 
-.card .main-picture {
+.main-picture {
   width: 612px;
   height: auto;
 }
@@ -245,11 +245,11 @@
 .sidebar {
   width: 293px;
   height: 400px;
-  margin-top: 85px;
+  margin-top: 88px;
   padding-top: 20px;
   position: sticky;
-  top: 10%;
-  right: 0;
+  top: 12%;
+  right: 0%;
 }
 
 .sidebar .perfil {
@@ -295,6 +295,7 @@
   line-height: 16.41px;
   font-size: 12px;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .sugestions h4 {
@@ -325,6 +326,7 @@
 
 .perfil-sugestion img {
   margin-right: 11px;
+  cursor: pointer;
 }
 .perfil-sugestion span {
   color: #979797;
@@ -358,12 +360,6 @@
   .barra-inferior {
     display: none;
   }
-  /* .logo-fixed{
-        position: fixed;
-        width: 100%;
-        height: 54px;
-        background-color: #139EF2;
-    } */
   .logo {
     width: 100%;
     padding: 0 20px;
@@ -389,7 +385,7 @@
   }
 
   .container {
-    width: 100vw;
+    width: 100%;
     height: auto;
   }
 
@@ -412,6 +408,7 @@
   }
 
   .stories-box {
+    width: auto;
     margin-top: 55px;
     margin-bottom: 0;
     border: none;
@@ -420,13 +417,9 @@
   .story {
     background-color: #fafafa;
   }
-  .main {
-    flex-direction: column;
-    align-items: center;
-    width: auto;
+  .main, .content{
+    width: 100%;
   }
-
-  .content,
   .card {
     width: auto;
     height: auto;
